@@ -1,14 +1,13 @@
 package org.example.day
 
-import org.example.service.FileLoaderService
 import kotlin.math.abs
 
-class Day1(day: Int, fileLoaderService: FileLoaderService) : DayHandler(day, fileLoaderService) {
-    override fun process() {
+class Day1 : DayHandler {
+    override fun process(input: List<String>) {
         val leftList: MutableList<String> = mutableListOf()
         val rightList: MutableList<String> = mutableListOf()
 
-        this.input
+        input
             .map { it.split("   ") }
             .forEach { parts ->
                 leftList.add(parts[0])
